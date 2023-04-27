@@ -9,7 +9,7 @@ class MyState extends ChangeNotifier {
   Future updateData(String url) async {
     var uri = Uri.parse(url);
     var response = await http.get(uri);
-    
+
     try {
       var body = jsonDecode(response.body);
       imageUrl = body['url'];
@@ -21,5 +21,4 @@ class MyState extends ChangeNotifier {
 
     notifyListeners();
   }
-
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/app.dart';
-import 'package:flutter_app/state.dart';
+import 'package:cs310_flutter_demo/app.dart';
+import 'package:cs310_flutter_demo/state.dart';
 import 'package:provider/provider.dart';
 
 void main() {

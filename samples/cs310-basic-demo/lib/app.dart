@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/state.dart';
+import 'package:cs310_flutter_demo/state.dart';
 import 'package:provider/provider.dart';
 
 class AppBody extends StatelessWidget {
@@ -19,21 +19,14 @@ class AppBody extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               child: TextField(
                 decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'URL'
-                ),
+                    border: OutlineInputBorder(), labelText: 'URL'),
                 onSubmitted: (String value) async {
                   state.updateData(value);
                 },
               ),
             ),
-
             if (state.imageUrl != null)
-              Image(
-                width: 256,
-                image: NetworkImage(state.imageUrl as String)
-              ),
-
+              Image(width: 256, image: NetworkImage(state.imageUrl as String)),
             Text(state.text),
           ],
         ),
